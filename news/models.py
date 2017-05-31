@@ -70,6 +70,7 @@ class Salon(Document):
     co_host = ListField()
     discuss = ListField()
     followers = ListField()
+    charge = DecimalField(force_string=True)
 
     created = DateTimeField(default=datetime.datetime.now)
     lut = DateTimeField(default=datetime.datetime.now)
