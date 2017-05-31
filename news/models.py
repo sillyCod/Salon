@@ -68,7 +68,7 @@ class Salon(Document):
 
     host = LongField(required=True)
     co_host = ListField()
-    discuss = ListField()
+    discuss = ListField()  # 内为item id
     followers = ListField()
     charge = DecimalField(force_string=True)
 
