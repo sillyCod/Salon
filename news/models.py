@@ -22,7 +22,7 @@ class Item(Document):
     }
     content = StringField()
     comments = ListField()
-    # news = EmbeddedDocument(News)
+    news = EmbeddedDocumentField(News)
 
     created = DateTimeField(default=datetime.datetime.now)
     lut = DateTimeField(default=datetime.datetime.now)
