@@ -23,6 +23,7 @@ class Item(Document):
     content = StringField()
     comments = ListField()
     news = EmbeddedDocumentField(News)
+    status = IntField()
 
     created = DateTimeField(default=datetime.datetime.now)
     lut = DateTimeField(default=datetime.datetime.now)
@@ -72,6 +73,7 @@ class Salon(Document):
     discuss = ListField()  # 内为item id
     followers = ListField()
     charge = DecimalField(force_string=True)
+    star = LongField()
 
     created = DateTimeField(default=datetime.datetime.now)
     lut = DateTimeField(default=datetime.datetime.now)
