@@ -103,8 +103,8 @@ ENV/
 #pycharm
 .idea/
 
-#db
+# db
 *.sqlite3
 
-#Git
+# Git
 .gitignore
