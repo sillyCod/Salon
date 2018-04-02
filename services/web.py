@@ -10,7 +10,7 @@ def login_check(func):
         if isinstance(subs[0], HttpRequest):
             login = subs[0].session.get('login')
             if not login:
-                return redirect()
+                return redirect("/news/wx_index")
             result = func(*subs, **kwargs)
             print('After login_check call.')
             return result
