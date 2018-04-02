@@ -12,7 +12,7 @@ def login_check(func):
             if not login:
                 return redirect()
             result = func(*subs, **kwargs)
-            print 'After login_check call.'
+            print('After login_check call.')
             return result
 
     return wrapper
