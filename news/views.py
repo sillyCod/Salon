@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import redirect
 from services.web import login_check
 
 # Create your views here.
@@ -7,6 +8,7 @@ from services.web import login_check
 
 @login_check
 def index(req):
+    return redirect("/news/wx_index")
     return HttpResponse("Hello, I'm oneline. New style to achieve news.")
 
 
